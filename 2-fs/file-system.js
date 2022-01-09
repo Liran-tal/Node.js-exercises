@@ -1,1 +1,3 @@
-import * as fs from 'fs/promises';
+const fs = require('fs');
+
+fs.writeFileSync('example.txt', 'example-1');
