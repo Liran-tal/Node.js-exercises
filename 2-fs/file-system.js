@@ -15,3 +15,8 @@ const fs = require('fs');
 
 
 console.log(fs.readdirSync('./'));
+
+fs.unlink('./example2.txt', (err) => {
+  if (err) throw err;
+  console.log('example2 deleted');
+});
