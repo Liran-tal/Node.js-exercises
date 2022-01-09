@@ -1,0 +1,14 @@
+Write in your own words the following:
+
+What are 3 things node.js has that the client side javascript doesn’t
+have. And the reasons why.
+
+1) node.js uses non-blocking event driven IO operetions; this allows response time to be reduced by half 
+
+2) Node "translate" javascript into C++ using Chromes V8 engine, thus providing the functionality of C++ without the need of writing a multilingual project.
+
+3)
+
+
+What are 3 things the client side javascript has that node.js doesn’t
+have. And the reasons why.
