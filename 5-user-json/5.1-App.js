@@ -36,4 +36,29 @@ yargs.command ({
 	}
 })
 
+yargs.command ({
+	command: "put",
+	describe: "Updates users data. Returns Updated user",
+	builder: {
+		id: {
+			describe: "ID to search for user",
+			demandOption: true,
+			type: "string",
+		},
+		newData: {
+			describe: "Data to change",
+			demandOption: true,
+			type: "string",
+		},
+		field: {
+			describe: "Field to change data in",
+			demandOption: true,
+			type: "string",
+		},
+	},
+	handler (argv) {
+		console.log(UsersApi.putUser(argv.id, argv.field, argv.newData));
+	}
+})
+
 yargs.parse();
