@@ -40,6 +40,17 @@ const putUser = (id, field, newData) => {
 	}
 }
 
+const deleteUser = (id) => {
+	const usersList = getUsersList();
+	const user = usersList.splice(getUserindex(usersList, id), 1);
+	try {
+		setUsersList(usersList);
+		return user;
+	} catch (error) {
+		console.log(error);
+	}	
+}
+
 const getUsersList = () => {
 	try {
 		return (
@@ -65,5 +76,5 @@ module.exports = {
 	postUser: postUser,
 	getUser: getUser,
 	putUser: putUser,
-	// removeUser: removeUser,
-}
+	deleteUser: deleteUser,
+}	

@@ -61,4 +61,19 @@ yargs.command ({
 	}
 })
 
+yargs.command ({
+	command: "delete",
+	describe: "deletes user from data base. Returns deleted user",
+	builder: {
+		id: {
+			describe: "ID to search for user",
+			demandOption: true,
+			type: "string",
+		},
+	},
+	handler (argv) {
+		console.log(UsersApi.deleteUser(argv.id));
+	}
+})
+
 yargs.parse();
