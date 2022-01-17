@@ -57,6 +57,13 @@ use('findMyRestaurant');
 // });
 
 
+// 3.1
+// db.restaurants.find({"name": /^a/})
+// db.restaurants.find({"name": /^s/})
+
+// 3.2
+
+
 
 // // Build an aggregation to view total sales for each product in 2014.
 // const aggregation = [
