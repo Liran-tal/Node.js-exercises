@@ -1,0 +1,74 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('findMyRestaurant');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+// db.sales.drop();
+
+// Insert a few documents into the sales collection.
+db.restaurants.insertMany([
+  { '_id': 1, 'name': 'a', "address": {
+      "city": "Ashdod",
+      "street": "One",
+      "coordinates": [-77,564, 40.677]
+    },
+    "cuisine": "East",
+    "kosher": true,
+    "reviews": ["yes", "no", "maybe"] 
+  },
+  { '_id': 2, 'name': 'b', "address": {
+      "city": "Berlin",
+      "street": "Two",
+      "coordinates": [-77,564, 40.677]
+    },
+    "cuisine": "South",
+    "kosher": false,
+    "reviews": ["true", "false", "undefined"] 
+  },
+  { '_id': 3, 'name': 'c', "address": {
+      "city": "China",
+      "street": "Three",
+      "coordinates": [-77,564, 40.677]
+    },
+    "cuisine": "West",
+    "kosher": true,
+    "reviews": ["React", "Node", "MongoDb"] 
+  },
+  { '_id': 4, 'name': 'd', "address": {
+      "city": "Damascus",
+      "street": "Four",
+      "coordinates": [-77,564, 40.677]
+    },
+    "cuisine": "North",
+    "kosher": false,
+    "reviews": ["javascript", "HTML", "CSS"] 
+  },
+  { '_id': 5, 'name': 'e', "address": {
+      "city": "Ephraim",
+      "street": "Five",
+      "coordinates": [-77,564, 40.677]
+    },
+    "cuisine": "Center",
+    "kosher": true,
+    "reviews": ["C", "C++", "JAVA"] 
+  },
+]);
+
+// Run a find command to view items sold on April 4th, 2014.
+// db.sales.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+
+// Build an aggregation to view total sales for each product in 2014.
+// const aggregation = [
+//   { $match: { date: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
+//   { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
+// ];
+
+// Run the aggregation and open a cursor to the results.
+// Use toArray() to exhaust the cursor to return the whole result set.
+// You can use hasNext()/next() to iterate through the cursor page by page.
+// db.sales.aggregate(aggregation);
