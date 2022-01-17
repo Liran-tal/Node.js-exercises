@@ -62,6 +62,9 @@ use('findMyRestaurant');
 // db.restaurants.find({"name": /^s/})
 
 // 3.2
+// db.restaurants.countDocuments()
+
+
 
 
 
