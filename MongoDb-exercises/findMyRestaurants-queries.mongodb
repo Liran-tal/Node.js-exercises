@@ -1,0 +1,48 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('findMyRestaurant');
+
+
+// 1.1
+db.restaurants.find();
+
+// 1.2
+db.restaurants.find({"cuisine": "South"});
+
+// 1.3
+db.restaurants.find({"kosher": true});
+
+// 1.4
+db.restaurants.find({"address.city": "Ashdod"});
+
+// 1.5
+db.restaurants.find({"address.city": "Berlin", "address.street": "Two"});
+
+// 1.6
+db.restaurants.find({"address.coordinates": [-77, 564, 40.677]});
+
+// 1.7
+db.restaurants.find().sort({"name": 1});
+
+// 1.8
+db.restaurants.find().sort({"address.city": 1});
+
+// 1.9
+db.restaurants.updateOne({"_id": 2}, {$set: {"name": "f"}})
+
+
+
+// // Build an aggregation to view total sales for each product in 2014.
+// const aggregation = [
+//   { $match: { date: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
+//   { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
+// ];
+
+// // Run the aggregation and open a cursor to the results.
+// // Use toArray() to exhaust the cursor to return the whole result set.
+// // You can use hasNext()/next() to iterate through the cursor page by page.
+// db.sales.aggregate(aggregation);
