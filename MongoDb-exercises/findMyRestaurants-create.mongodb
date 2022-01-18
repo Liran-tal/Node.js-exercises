@@ -12,7 +12,10 @@ use('findMyRestaurant');
 
 // Insert a few documents into the sales collection.
 db.restaurants.insertMany([
-  { '_id': 1, 'name': 'a', "address": {
+  { 
+		'_id': 1,
+		'name': 'a',
+		"address": {
       "city": "Ashdod",
       "street": "One",
       "coordinates": [-77.564, 40.677]
@@ -34,7 +37,7 @@ db.restaurants.insertMany([
 			}
 		] 
   },
-  { '_id': 2, 'name': 'b', "address": {
+  {'_id': 2, 'name': 'b', "address": {
       "city": "Berlin",
       "street": "Two",
       "coordinates": [-77.564, 40.677]

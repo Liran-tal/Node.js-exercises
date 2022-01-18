@@ -65,7 +65,20 @@ use('findMyRestaurant');
 // db.restaurants.countDocuments()
 
 // 3.3
-db.restaurants.find({"reviews.date": ISODate("2014-04-04T21:23:13.331Z")})
+// db.restaurants.find({"reviews.date": ISODate("2014-04-04T21:23:13.331Z")})
+
+
+// 4.1
+db.restaurants.aggregate([
+		{ $unwind: { path: "$reviews" } },
+		{ $group: {
+			 _id: "$reviews",avgRating: { $avg: "$reviews.rating" }
+			}
+		}
+	
+]).forEach(function(obj){
+	print(obj.avgRating);
+});
 
 
 
