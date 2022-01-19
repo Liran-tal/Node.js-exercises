@@ -15,9 +15,7 @@ const {
 
 Router.post("/create-product", createProduct);
 
-Router.get("/get-all-products", getProducts);
-
-Router.get("/get-product/:id", getProducts);
+Router.get("/get-products", getProducts);
 
 Router.get("/get-active-products", getActiveProducts);
 
@@ -27,9 +25,9 @@ Router.put("/update-product-activation", toggleProductActive);
 
 Router.put("/update-product-discount", updateProductDiscount);
 
-Router.delete("delete-product/:id", deleteProductById);
+Router.delete("/delete-product", deleteProductById);
 
-Router.delete("delete-all-products", deleteAllProducts);
+Router.delete("/delete-all-products", deleteAllProducts);
 
 
 module.exports = Router

@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Basil",
+		"category": "spices",
+		"isActive": true,
+		"details": {
+			"description": "Good for pasta",
+			"price": 5,
+			"discount": 0,
+			"images": ["url1", "url2"],
+			"phone": "09-123-4567"
+		}
+	},
+	{
+		"name": "Cummin",
+		"category": "spices",
+		"isActive": true,
+		"details": {
+			"description": "Good for fish",
+			"price": 3,
+			"discount": 0,
+			"images": ["url5", "url7"],
+			"phone": "09-123-4567"
+		}
+	},
+	{
+		"name": "Tofu",
+		"category": "vegan",
+		"isActive": true,
+		"details": {
+			"description": "Good for vegans",
+			"price": 12,
+			"discount": 0,
+			"images": ["url3", "url8"],
+			"phone": "09-123-4567"
+		}
+	}
+]
