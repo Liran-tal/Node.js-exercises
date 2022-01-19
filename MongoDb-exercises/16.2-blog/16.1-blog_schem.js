@@ -65,6 +65,12 @@ const more_comments = [
 ];
 
 
+const mongoose_exercise_data = [
+	{
+		
+	}
+]
+
 module.exports = {
 	users: users,
 	more_comments: more_comments

@@ -70,15 +70,16 @@ use('findMyRestaurant');
 
 // 4.1
 db.restaurants.aggregate([
-		{ $unwind: { path: "$reviews" } },
+		// { $unwind: { path: "$reviews" } },
 		{ $group: {
 			 _id: "$reviews",avgRating: { $avg: "$reviews.rating" }
 			}
 		}
 	
-]).forEach(function(obj){
-	print(obj.avgRating);
-});
+])
+// .forEach(function(obj){
+// 	print(obj.avgRating);
+// });
 
 
 
