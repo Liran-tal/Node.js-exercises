@@ -1,45 +1,42 @@
-const mongodb = require ('mongodb');
-const MongoClient = mongodb.MongoClient;
-const mongoose = require('mongoose');
+const Product = require("../../schemas/product_schema")
+
+// const mongoose = require('mongoose');
+// mongoose.connect("mongodb://127.0.0.1:27017/exercise-16_2-blogs");
+
+const createProduct = async (req, res) => {
+	
+};
 
 
+const getProducts = async (req, res) => {
+	res.send(await Product.find());
+};
 
-const createProduct = (req, res) => {
+
+const getActiveProducts = async (req, res) => {
 
 };
 
 
-const getProducts = (req, res) => {
+const getProductsByPrice = async (req, res) => {
 
 };
 
 
-const getProducts = (req, res) => {
+const toggleProductActive = async (req, res) => {
+
+};
+
+const updateProductDiscount = async (req, res) => {
+
+};
+
+const deleteProductById = async (req, res) => {
 
 };
 
 
-const getActiveProducts = (req, res) => {
-
-};
-
-
-const getProductsByPrice = (req, res) => {
-
-};
-
-
-const toggleProductActive = (req, res) => {
-
-};
-
-
-const deleteProductById = (req, res) => {
-
-};
-
-
-const deleteAllProducts = (req, res) => {
+const deleteAllProducts = async (req, res) => {
 
 };
 
@@ -52,6 +49,7 @@ module.exports = {
 	getActiveProducts,
 	getProductsByPrice,
 	toggleProductActive,
+	updateProductDiscount,
 	deleteProductById,
 	deleteAllProducts,
 };

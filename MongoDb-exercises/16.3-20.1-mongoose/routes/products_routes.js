@@ -4,13 +4,14 @@ const Router = express.Router();
 const {
 	createProduct,
 	getProducts,
-	getProducts,
 	getActiveProducts,
 	getProductsByPrice,
 	toggleProductActive,
+	updateProductDiscount,
 	deleteProductById,
 	deleteAllProducts,
 } = require("../controlers/products/products_controlers")
+
 
 Router.post("/create-product", createProduct);
 
