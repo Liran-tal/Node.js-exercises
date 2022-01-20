@@ -36,8 +36,8 @@ const getProductsByPrice = async (req, res) => {
 	console.log(min, max);
 	try {
 		console.log(Product);
-		const products = await Product.details.find(
-			{price: {$gte: min}, price: {$lt: max}}
+		const products = await Product.find(
+			{'details.price': {$gte: min, $lt: max}}
 		);
 		console.log(products);
 		res.status(200).send(products);
@@ -51,9 +51,9 @@ const toggleProductActive = async (req, res) => {
 	console.log("toggleProductActive");
 	console.log(req.query.id);
 	try {
-		const product = await Product.findOneAndUpdate(
-			{$isActive: req.query.id}, {$isActive: !$isActive}, {"options.new": true}
-		);
+		const product = await Product.findById(req.query.id);
+		product.isActive = !product.isActive;
+		product.save();
 		res.status(200).send(product);
 	} catch (error) {
 		res.status(400).send(error);
